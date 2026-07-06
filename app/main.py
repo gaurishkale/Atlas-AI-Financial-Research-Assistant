@@ -1,22 +1,31 @@
-from rag.loader import PDFLoader
+from rag.pipeline import RAGPipeline
 
 
 def main():
 
-    loader = PDFLoader("data/reports/tcs_annual_report.pdf")
+    pipeline = RAGPipeline()
 
-    document = loader.load()
+    total_chunks = pipeline.ingest(
+        "data/reports/tcs_annual_report.pdf"
+    )
 
-    print("=" * 60)
-    print("AtlasIQ")
-    print("=" * 60)
+    print(f"\nChunks Created : {total_chunks}\n")
 
-    print(f"File : {document['file_name']}")
-    print(f"Pages: {document['total_pages']}")
+    results = pipeline.search(
+        "What is the company's revenue?"
+    )
 
-    print()
+    for index, result in enumerate(results):
 
-    print(document["pages"][0]["content"][:2000])
+        print("=" * 60)
+
+        print(f"Result {index+1}")
+
+        print(f"Page : {result.metadata['page']}")
+
+        print()
+
+        print(result.page_content[:500])
 
 
 if __name__ == "__main__":
