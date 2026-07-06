@@ -3,12 +3,16 @@ from rag.chunker import TextChunker
 from rag.embedder import AtlasEmbedding
 from rag.vector_store import AtlasVectorStore
 
+from llm.chat import AtlasLLM
+from prompts.rag_prompt import RAG_PROMPT
+
 
 class RAGPipeline:
 
     def __init__(self):
 
         self.loader = None
+
         self.chunker = TextChunker()
 
         self.embedding = AtlasEmbedding()
@@ -16,6 +20,8 @@ class RAGPipeline:
         self.vector_store = AtlasVectorStore(
             self.embedding.get_model()
         )
+
+        self.chat = AtlasLLM()
 
     def ingest(self, pdf_path: str):
 
@@ -37,3 +43,20 @@ class RAGPipeline:
             query,
             k
         )
+
+    def ask(self, question: str):
+
+        docs = self.search(question)
+
+        context = "\n\n".join(
+            [doc.page_content for doc in docs]
+        )
+
+        prompt = RAG_PROMPT.format(
+            context=context,
+            question=question
+        )
+
+        answer = self.chat.ask(prompt)
+
+        return answer, docs

@@ -5,27 +5,26 @@ def main():
 
     pipeline = RAGPipeline()
 
-    total_chunks = pipeline.ingest(
+    pipeline.ingest(
         "data/reports/tcs_annual_report.pdf"
     )
 
-    print(f"\nChunks Created : {total_chunks}\n")
-
-    results = pipeline.search(
-        "What is the company's revenue?"
+    answer, docs = pipeline.ask(
+        "What are the company's revenue recognition policies?"
     )
 
-    for index, result in enumerate(results):
+    print("\n")
+    print("=" * 60)
+    print("ANSWER")
+    print("=" * 60)
 
-        print("=" * 60)
+    print(answer)
 
-        print(f"Result {index+1}")
+    print("\nSources")
 
-        print(f"Page : {result.metadata['page']}")
+    for doc in docs:
 
-        print()
-
-        print(result.page_content[:500])
+        print(f"Page {doc.metadata['page']}")
 
 
 if __name__ == "__main__":
