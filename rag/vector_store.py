@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from langchain_chroma import Chroma
 
 
@@ -35,4 +33,8 @@ class AtlasVectorStore:
 
     def similarity_search(self, query, k=5):
 
-        return self.vector_db.similarity_search(query, k=k)
+        return self.vector_db.max_marginal_relevance_search(
+            query=query,
+            k=k,
+            fetch_k=20
+        )

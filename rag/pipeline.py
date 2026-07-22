@@ -2,6 +2,7 @@ from rag.loader import PDFLoader
 from rag.chunker import TextChunker
 from rag.embedder import AtlasEmbedding
 from rag.vector_store import AtlasVectorStore
+from rag.retriever import AtlasRetriever
 
 from llm.chat import AtlasLLM
 from prompts.rag_prompt import RAG_PROMPT
@@ -19,6 +20,10 @@ class RAGPipeline:
 
         self.vector_store = AtlasVectorStore(
             self.embedding.get_model()
+        )
+
+        self.retriever = AtlasRetriever(
+            self.vector_store
         )
 
         self.chat = AtlasLLM()
@@ -39,9 +44,9 @@ class RAGPipeline:
 
     def search(self, query: str, k: int = 5):
 
-        return self.vector_store.similarity_search(
-            query,
-            k
+        return self.retriever.retrieve(
+            question=query,
+            k=k
         )
 
     def ask(self, question: str):
@@ -49,7 +54,10 @@ class RAGPipeline:
         docs = self.search(question)
 
         context = "\n\n".join(
-            [doc.page_content for doc in docs]
+            [
+                f"Page {doc.metadata['page']}:\n{doc.page_content}"
+                for doc in docs
+            ]
         )
 
         prompt = RAG_PROMPT.format(
