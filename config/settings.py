@@ -7,14 +7,14 @@ class Settings(BaseSettings):
     GOOGLE_API_KEY: str
 
     LLM_PROVIDER: str = "gemini"
-    LLM_MODEL: str = "gemini-2.5-flash"
+    LLM_MODEL: str = "gemini-3.6-flash"
 
-    EMBEDDING_PROVIDER: str = "gemini"
-    EMBEDDING_MODEL: str = "models/gemini-embedding-2"
+    EMBEDDING_PROVIDER: str = "huggingface"
+    EMBEDDING_MODEL: str = "BAAI/bge-base-en-v1.5"
 
     # RAG
-    CHUNK_SIZE: int = 1000
-    CHUNK_OVERLAP: int = 200
+    CHUNK_SIZE: int = 2500
+    CHUNK_OVERLAP: int = 200                    
 
     # ChromaDB
     COLLECTION_NAME: str = "atlas_reports"
@@ -25,3 +25,6 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
+print("LLM Model:", settings.LLM_MODEL)
+print("Embedding Model:", settings.EMBEDDING_MODEL)

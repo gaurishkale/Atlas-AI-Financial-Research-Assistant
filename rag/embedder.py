@@ -1,13 +1,22 @@
-from langchain_google_genai import GoogleGenerativeAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
+
 from config.settings import settings
 
 
 class AtlasEmbedding:
+
     def __init__(self):
-        self.embedding = GoogleGenerativeAIEmbeddings(
-            model=settings.EMBEDDING_MODEL,
-            google_api_key=settings.GOOGLE_API_KEY,
+
+        self.embedding = HuggingFaceEmbeddings(
+            model_name=settings.EMBEDDING_MODEL,
+            model_kwargs={
+                "device": "cpu"
+            },
+            encode_kwargs={
+                "normalize_embeddings": True
+            }
         )
 
     def get_model(self):
+
         return self.embedding

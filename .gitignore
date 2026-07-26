@@ -1,14 +1,23 @@
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual Environment
 .venv/
 venv/
 
-# Environment
+# Environment Variables
 .env
 
-# VS Code
+# Chroma Database
+database/
+
+# IDE
 .vscode/
+.idea/
 
 # OS
 .DS_Store
@@ -17,8 +26,8 @@ Thumbs.db
 # Logs
 *.log
 
-# ChromaDB
-chroma_db/
+# Jupyter
+.ipynb_checkpoints/
 
-# Streamlit
-.streamlit/secrets.toml
+# PyTorch Cache
+.cache/

@@ -1,5 +1,6 @@
 from pathlib import Path
 from typing import Dict
+import os
 
 from pypdf import PdfReader
 
@@ -14,8 +15,19 @@ class PDFLoader:
 
     def load(self) -> Dict:
 
+        print("\n" + "=" * 70)
+        print("Current Working Directory :", os.getcwd())
+        print("PDF Path Received         :", repr(str(self.pdf_path)))
+        print("Absolute Path             :", self.pdf_path.resolve())
+        print("File Exists               :", self.pdf_path.exists())
+        print("=" * 70 + "\n")
+
         if not self.pdf_path.exists():
-            raise FileNotFoundError(f"{self.pdf_path} does not exist.")
+            raise FileNotFoundError(
+                f"PDF not found!\n"
+                f"Received Path : {self.pdf_path}\n"
+                f"Absolute Path : {self.pdf_path.resolve()}"
+            )
 
         reader = PdfReader(self.pdf_path)
 
@@ -26,13 +38,14 @@ class PDFLoader:
             text = page.extract_text()
 
             if text:
-
                 pages.append(
                     {
                         "page": index + 1,
                         "content": text
                     }
                 )
+
+        print(f"Successfully loaded {len(reader.pages)} pages from '{self.pdf_path.name}'")
 
         return {
             "file_name": self.pdf_path.name,
