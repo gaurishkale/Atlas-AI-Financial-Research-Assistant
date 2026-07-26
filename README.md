@@ -2,348 +2,315 @@
 
 # 🚀 AtlasIQ
 
-### **AI-Powered Financial Research Assistant**
+### AI-Powered Financial Research Assistant
 
-*Transforming Annual Reports into Actionable Intelligence using Retrieval-Augmented Generation (RAG), Large Language Models, and Semantic Search.*
+*Analyze annual reports using Retrieval-Augmented Generation (RAG), semantic search, and Large Language Models.*
 
 <p align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-Production-009688?style=for-the-badge&logo=fastapi)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-green?style=for-the-badge)
 ![Gemini](https://img.shields.io/badge/Gemini-LLM-4285F4?style=for-the-badge&logo=google)
-![ChromaDB](https://img.shields.io/badge/Vector%20DB-ChromaDB-orange?style=for-the-badge)
-![HuggingFace](https://img.shields.io/badge/Embeddings-HuggingFace-yellow?style=for-the-badge&logo=huggingface)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorDB-orange?style=for-the-badge)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-Embeddings-yellow?style=for-the-badge&logo=huggingface)
 ![License](https://img.shields.io/badge/License-MIT-success?style=for-the-badge)
 
 </p>
 
----
+<p align="center">
 
-### 📈 Ask Questions. Retrieve Facts. Analyze Reports.
+<a href="#-demo">Demo</a> •
+<a href="#-features">Features</a> •
+<a href="#-architecture">Architecture</a> •
+<a href="#-installation">Installation</a> •
+<a href="#-api-reference">API</a>
 
-AtlasIQ is an **AI-powered Financial Research Assistant** designed to help analysts, investors, researchers, and finance professionals extract insights from lengthy annual reports using **Retrieval-Augmented Generation (RAG)**.
-
-Instead of manually searching through hundreds of pages, AtlasIQ retrieves the most relevant document sections using semantic search and generates grounded, context-aware responses powered by modern LLMs.
+</p>
 
 </div>
 
 ---
 
-# 🎥 Demo
+## 📖 Overview
 
-> **📷 Coming Soon**
+**AtlasIQ** is an AI-powered financial research assistant that enables users to interact with annual reports using natural language. Instead of manually searching through hundreds of pages, AtlasIQ retrieves the most relevant document sections using **Retrieval-Augmented Generation (RAG)** and generates grounded responses with source citations.
 
-<p align="center">
-
-| Dashboard | Semantic Search | Source Citation |
-|------------|----------------|----------------|
-| Coming Soon | Coming Soon | Coming Soon |
-
-</p>
+Built with **FastAPI**, **LangChain**, **Hugging Face Embeddings**, **ChromaDB**, and **Google Gemini**, AtlasIQ is designed to provide fast, accurate, and explainable insights from financial documents.
 
 ---
 
-# ✨ Why AtlasIQ?
+## 🚀 At a Glance
 
-Financial reports often exceed **300–500 pages**, making manual analysis time-consuming and inefficient.
-
-AtlasIQ simplifies financial research by enabling users to ask questions in natural language, such as:
-
-- What are the major revenue sources?
-- What risks does the company mention?
-- How has operating profit changed?
-- What are the management's future strategies?
-- Which business segment contributed the most revenue?
-- What ESG initiatives were introduced?
-
-The system automatically retrieves the most relevant document chunks before generating an answer grounded in the report.
+- 📄 Analyze 300+ page annual reports in seconds
+- 🔍 Semantic search powered by Hugging Face embeddings
+- 🧠 Retrieval-Augmented Generation (RAG)
+- 🗄️ ChromaDB vector database for efficient retrieval
+- 🤖 Google Gemini for context-aware responses
+- 📑 Source-backed answers with page references
+- ⚡ FastAPI REST API for seamless integration
 
 ---
 
-# 🚀 Key Features
+## 🎥 Demo
 
-## 📄 Intelligent PDF Processing
+> **Coming Soon**
 
-- Automatic PDF ingestion
-- Page-wise document parsing
-- Metadata extraction
-- Smart recursive chunking
-- Chunk overlap optimization
+Suggested additions:
+
+- 📸 Dashboard Screenshot
+- 🎥 Demo GIF
+- 📖 Example Financial Report
+- ⚡ Swagger API Preview
+
+```
++--------------------------------------------------------------+
+|                     AtlasIQ Dashboard                        |
+|                                                              |
+|  Question: What are the major revenue drivers?               |
+|                                                              |
+|  ✅ Revenue increased by 18% due to cloud services...         |
+|                                                              |
+|  Source: Page 54 – TCS Annual Report                         |
++--------------------------------------------------------------+
+```
+
+---
+# ✨ Features
+
+| Feature | Description |
+|----------|-------------|
+| 📄 Intelligent PDF Processing | Automatically ingests and processes annual reports using PyMuPDF. |
+| 🧠 Retrieval-Augmented Generation | Retrieves relevant document chunks before generating responses. |
+| 🔍 Semantic Search | Finds information based on meaning instead of exact keywords. |
+| 🤖 AI-Powered Answers | Uses Google Gemini to generate grounded, context-aware responses. |
+| 🗄️ Vector Search | Stores embeddings in ChromaDB for fast similarity search. |
+| 📑 Source Attribution | Every answer includes document and page references for transparency. |
+| ⚡ REST API | FastAPI-based endpoints for document ingestion and question answering. |
 
 ---
 
-## 🧠 Semantic Search
+# 🛠️ Tech Stack
 
-- HuggingFace Embeddings
-- Chroma Vector Database
-- Similarity Search
-- Top-K Retrieval
-- Metadata-aware retrieval
-
----
-
-## 🤖 AI-Powered Answers
-
-- Gemini LLM Integration
-- Context-aware generation
-- Hallucination reduction
-- Source-grounded responses
-- Financial document understanding
+| Category | Technologies |
+|----------|--------------|
+| **Backend** | Python, FastAPI |
+| **LLM** | Google Gemini |
+| **Framework** | LangChain |
+| **Embeddings** | Hugging Face (BAAI/bge-base-en-v1.5) |
+| **Vector Database** | ChromaDB |
+| **Document Processing** | PyMuPDF |
+| **API Testing** | Swagger UI |
+| **Version Control** | Git & GitHub |
 
 ---
 
-## 📊 Retrieval-Augmented Generation (RAG)
+# 🎯 Use Cases
 
-✔ Document Loading
+AtlasIQ is designed for professionals and researchers working with financial documents.
 
-✔ Intelligent Chunking
+### 📈 Financial Research
+- Analyze annual reports
+- Understand revenue drivers
+- Explore business performance
 
-✔ Vector Embeddings
+### 💰 Investment Analysis
+- Review financial statements
+- Compare company performance
+- Extract management insights
 
-✔ Vector Storage
+### ⚠️ Risk Assessment
+- Identify business risks
+- Review regulatory disclosures
+- Analyze governance practices
 
-✔ Semantic Retrieval
-
-✔ Prompt Engineering
-
-✔ LLM Response Generation
-
-✔ Source Attribution
+### 📊 Enterprise Knowledge Search
+- Search internal financial reports
+- Retrieve document-specific insights
+- Generate source-backed responses
 
 ---
 
-# 🌟 Core Capabilities
+# 📌 Current Capabilities
 
 | Capability | Status |
-|------------|--------|
-| PDF Parsing | ✅ |
-| RAG Pipeline | ✅ |
+|------------|:------:|
+| Annual Report Ingestion | ✅ |
+| Metadata-aware Chunking | ✅ |
 | Semantic Search | ✅ |
-| ChromaDB | ✅ |
-| HuggingFace Embeddings | ✅ |
-| Gemini LLM | ✅ |
-| Metadata Enrichment | ✅ |
-| REST API | ✅ |
-| Source Citation | ✅ |
-| Multi-document Support | 🚧 |
-| Hybrid Search | 🚧 |
-| Cross Encoder Reranking | 🚧 |
-| Financial Charts | 🚧 |
+| RAG Pipeline | ✅ |
+| Hugging Face Embeddings | ✅ |
+| ChromaDB Integration | ✅ |
+| Google Gemini Integration | ✅ |
+| FastAPI REST API | ✅ |
+| Source Attribution | ✅ |
+| Multi-document Retrieval | 🚧 Planned |
+| Hybrid Search | 🚧 Planned |
+| OCR Support | 🚧 Planned |
 
 ---
 
-# 🛠 Technology Stack
+# 💡 Why AtlasIQ?
 
-## Backend
+Unlike traditional PDF chat applications, AtlasIQ is purpose-built for **financial document analysis**.
 
-- FastAPI
-- Python
+Instead of sending an entire report to an LLM, AtlasIQ follows a **Retrieval-Augmented Generation (RAG)** workflow:
 
-## AI
+- 📄 Extracts and processes PDF documents
+- ✂️ Splits content into optimized chunks
+- 🧠 Generates semantic embeddings
+- 🔍 Retrieves only the most relevant information
+- 🤖 Produces grounded responses using Google Gemini
+- 📑 Returns answers with source references
 
-- LangChain
-- Google Gemini
-- HuggingFace Embeddings
-
-## Vector Database
-
-- ChromaDB
-
-## Document Processing
-
-- PyMuPDF
-- Recursive Character Text Splitter
-
-## API
-
-- FastAPI
-- REST
-
-## Future Frontend
-
-- Next.js
-- React
-- Tailwind CSS
+This approach improves **accuracy**, **reduces hallucinations**, and makes responses **traceable to the original document**.
 
 ---
+# 🏗️ Architecture
 
-# 🏗 System Architecture
+AtlasIQ follows a modular **Retrieval-Augmented Generation (RAG)** architecture that transforms financial reports into searchable knowledge and generates grounded answers using an LLM.
 
 ```text
-                        User
-                          │
-                          ▼
-                 Natural Language Query
-                          │
-                          ▼
-                   FastAPI Backend
-                          │
-         ┌────────────────┴────────────────┐
-         │                                 │
-         ▼                                 ▼
-    PDF Documents                     User Question
-         │                                 │
-         ▼                                 ▼
-     PDF Loader                      Retriever
-         │                                 │
-         ▼                                 ▼
- Intelligent Chunking             Similarity Search
-         │                                 │
-         ▼                                 ▼
- Metadata Enrichment             Relevant Chunks
-         │                                 │
-         └──────────────┬──────────────────┘
-                        ▼
-                  Prompt Builder
-                        │
-                        ▼
-                   Gemini LLM
-                        │
-                        ▼
-              Context-Aware Answer
-                        │
-                        ▼
-             Source Pages + Metadata
+                          ┌──────────────────────────┐
+                          │   Financial Report PDF   │
+                          └─────────────┬────────────┘
+                                        │
+                                        ▼
+                              ┌──────────────────┐
+                              │   PDF Loader     │
+                              └────────┬─────────┘
+                                       │
+                                       ▼
+                            ┌─────────────────────┐
+                            │ Text Chunking       │
+                            │ + Metadata          │
+                            └────────┬────────────┘
+                                     │
+                                     ▼
+                          ┌────────────────────────┐
+                          │ Hugging Face           │
+                          │ Embedding Model        │
+                          └────────┬───────────────┘
+                                   │
+                                   ▼
+                          ┌────────────────────────┐
+                          │      ChromaDB          │
+                          │    Vector Database     │
+                          └────────┬───────────────┘
+                                   ▲
+                                   │
+                    ┌──────────────┴──────────────┐
+                    │                             │
+                    ▼                             │
+            User Question                         │
+                    │                             │
+                    ▼                             │
+             Semantic Retriever ──────────────────┘
+                    │
+                    ▼
+            Retrieved Context
+                    │
+                    ▼
+             Google Gemini
+                    │
+                    ▼
+        Grounded Answer + Source Citation
 ```
 
 ---
 
-# 🔄 AtlasIQ Workflow
+# 🔄 Workflow
 
 ```mermaid
 flowchart LR
 
-A[PDF Report]
--->
-B[PDF Loader]
+A[Upload PDF]
+--> B[Extract Text]
 
 B
--->
-C[Text Chunking]
+--> C[Chunk Document]
 
 C
--->
-D[Metadata Enrichment]
+--> D[Generate Embeddings]
 
 D
--->
-E[Embedding Model]
-
-E
--->
-F[ChromaDB]
+--> E[(ChromaDB)]
 
 User
--->
-G[Question]
-
-G
--->
-H[Retriever]
+--> F[Ask Question]
 
 F
--->
-H
+--> G[Retriever]
+
+E
+--> G
+
+G
+--> H[Build Prompt]
 
 H
--->
-I[Prompt Construction]
+--> I[Gemini]
 
 I
--->
-J[Gemini]
-
-J
--->
-K[Answer + Sources]
+--> J[Answer with Sources]
 ```
 
 ---
 
-# 📦 Project Highlights
+# ⚙️ How It Works
 
-### ⚡ Fast Semantic Retrieval
-
-Retrieve only the most relevant document sections instead of sending the entire report to the LLM.
-
----
-
-### 📖 Source Grounding
-
-Every response is backed by the originating document pages, improving transparency and trust.
-
----
-
-### 🧩 Modular Architecture
-
-The project separates responsibilities into independent modules for:
-
-- Document Loading
-- Chunking
-- Embeddings
-- Vector Storage
-- Retrieval
-- Prompting
-- LLM Integration
-- API Services
+1. **Upload** a financial report in PDF format.
+2. AtlasIQ extracts text and preserves page-level metadata.
+3. The document is split into overlapping chunks for better context retention.
+4. Each chunk is converted into semantic embeddings using **BAAI/bge-base-en-v1.5**.
+5. Embeddings are stored in **ChromaDB** for efficient similarity search.
+6. When a user asks a question, AtlasIQ retrieves the most relevant document chunks.
+7. The retrieved context is sent to **Google Gemini** to generate a grounded response.
+8. The final answer is returned along with the corresponding document and page references.
 
 ---
 
-### 📈 Scalable Design
+# 📂 Project Structure
 
-AtlasIQ is designed to evolve into a production-ready financial intelligence platform with support for:
-
-- Multiple reports
-- Multiple companies
-- Advanced search
-- Financial visualization
-- Agentic workflows
-- Enterprise knowledge bases
-
----
-
-# 📌 Current Architecture
-
-```
+```text
 AtlasIQ
 │
-├── Document Loader
-├── Intelligent Chunker
-├── Metadata Processor
-├── HuggingFace Embeddings
-├── ChromaDB
-├── Retriever
-├── Prompt Builder
-├── Gemini LLM
-└── FastAPI
+├── backend/          # FastAPI application
+├── rag/              # RAG pipeline
+│   ├── loader.py
+│   ├── chunker.py
+│   ├── embedder.py
+│   ├── vector_store.py
+│   ├── retriever.py
+│   └── pipeline.py
+│
+├── llm/              # Gemini integration
+├── prompts/          # Prompt templates
+├── config/           # Configuration
+├── database/         # ChromaDB storage
+├── data/reports/     # Financial reports
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# ⭐ What Makes AtlasIQ Different?
+## 🎯 Design Highlights
 
-Unlike traditional PDF chat applications, AtlasIQ focuses specifically on **financial intelligence**.
+- **Modular Architecture** – Each component has a single responsibility, making the system easy to extend and maintain.
+- **Semantic Retrieval** – Uses embeddings instead of keyword matching to improve search relevance.
+- **Grounded Responses** – Answers are generated only from retrieved document context, reducing hallucinations.
+- **Scalable Design** – Supports future enhancements such as multi-document retrieval, hybrid search, reranking, and additional LLMs without major architectural changes.
 
-It is designed to support workflows such as:
+---
+# ⚙️ Installation
 
-- Equity Research
-- Annual Report Analysis
-- Company Comparison
-- Financial Statement Review
-- Investment Research
-- Risk Assessment
-- ESG Analysis
-- Executive Decision Support
+## Prerequisites
 
-# 🚀 Getting Started
+Before getting started, ensure you have the following installed:
 
-## 📋 Prerequisites
-
-Before running AtlasIQ locally, ensure you have the following installed:
-
-| Software | Version |
-|-----------|----------|
+| Requirement | Version |
+|-------------|---------|
 | Python | 3.11+ |
 | Git | Latest |
 | pip | Latest |
@@ -351,9 +318,7 @@ Before running AtlasIQ locally, ensure you have the following installed:
 
 ---
 
-# ⚙️ Installation
-
-## 1️⃣ Clone the Repository
+## 1. Clone the Repository
 
 ```bash
 git clone https://github.com/gaurishkale/AtlasIQ.git
@@ -363,7 +328,7 @@ cd AtlasIQ
 
 ---
 
-## 2️⃣ Create Virtual Environment
+## 2. Create a Virtual Environment
 
 ### Windows
 
@@ -383,7 +348,7 @@ source .venv/bin/activate
 
 ---
 
-## 3️⃣ Install Dependencies
+## 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -391,184 +356,35 @@ pip install -r requirements.txt
 
 ---
 
-## 4️⃣ Configure Environment Variables
+## 4. Configure Environment Variables
 
 Create a `.env` file in the project root.
 
 ```env
-GOOGLE_API_KEY=YOUR_GEMINI_API_KEY
+GOOGLE_API_KEY=your_google_gemini_api_key
 ```
 
 ---
 
-## 5️⃣ Start FastAPI Server
+## 5. Start the API Server
 
 ```bash
 python -m fastapi dev backend/main.py
 ```
 
-Server:
+The application will be available at:
 
-```
-http://127.0.0.1:8000
-```
-
-Swagger Docs:
-
-```
-http://127.0.0.1:8000/docs
-```
-
-Redoc:
-
-```
-http://127.0.0.1:8000/redoc
-```
+| Service | URL |
+|----------|-----|
+| API | http://127.0.0.1:8000 |
+| Swagger UI | http://127.0.0.1:8000/docs |
+| ReDoc | http://127.0.0.1:8000/redoc |
 
 ---
 
-# 📂 Project Structure
+# 📡 API Reference
 
-```
-AtlasIQ/
-
-│
-├── backend/
-│   ├── main.py
-│   ├── routes.py
-│   └── services.py
-│
-├── rag/
-│   ├── loader.py
-│   ├── chunker.py
-│   ├── embedder.py
-│   ├── vector_store.py
-│   ├── retriever.py
-│   └── pipeline.py
-│
-├── llm/
-│   └── chat.py
-│
-├── prompts/
-│   └── rag_prompt.py
-│
-├── config/
-│   └── settings.py
-│
-├── database/
-│
-├── data/
-│   └── reports/
-│
-├── requirements.txt
-│
-├── .env
-│
-└── README.md
-```
-
----
-
-# 📁 Folder Overview
-
-## backend/
-
-Contains the FastAPI application responsible for exposing REST APIs.
-
-Responsibilities
-
-- API endpoints
-- Request validation
-- Response formatting
-- Service layer
-
----
-
-## rag/
-
-Core Retrieval-Augmented Generation implementation.
-
-Modules
-
-✔ PDF Loading
-
-✔ Text Chunking
-
-✔ Metadata Enrichment
-
-✔ Embeddings
-
-✔ Chroma Vector Store
-
-✔ Semantic Retrieval
-
-✔ Pipeline Orchestration
-
----
-
-## llm/
-
-Responsible for interacting with Google Gemini.
-
-Features
-
-- Prompt execution
-- Model abstraction
-- Future multi-model support
-
----
-
-## prompts/
-
-Contains prompt templates used for retrieval-augmented generation.
-
-Current Prompt
-
-- Financial Question Answering Prompt
-
-Future
-
-- Comparative Analysis
-- Financial Summarization
-- Risk Analysis
-- Earnings Report Prompt
-
----
-
-## database/
-
-Persistent ChromaDB storage.
-
-Contains
-
-- Vector embeddings
-- Metadata
-- Document chunks
-
-Automatically created after document ingestion.
-
----
-
-## data/
-
-Stores uploaded financial reports.
-
-Example
-
-```
-data/
-
-└── reports/
-    ├── tcs_annual_report.pdf
-    ├── infosys_annual_report.pdf
-    └── reliance_report.pdf
-```
-
----
-
-# 🔄 API Endpoints
-
-## POST /ingest
+## POST `/ingest`
 
 Indexes a financial report into the vector database.
 
@@ -576,935 +392,168 @@ Indexes a financial report into the vector database.
 
 ```json
 {
-  "pdf_path": "data/reports/tcs_annual_report.pdf"
+    "pdf_path": "data/reports/tcs_annual_report.pdf"
 }
 ```
 
----
-
-### Response
+### Success Response
 
 ```json
 {
-  "chunks": 1438
+    "chunks": 1438
 }
 ```
 
 ---
 
-## POST /ask
+## POST `/ask`
 
-Ask questions about the indexed report.
+Retrieves relevant document sections and generates a grounded answer.
 
 ### Request
 
 ```json
 {
-  "question": "What are the major sources of revenue?"
+    "question": "What are the company's major revenue sources?"
 }
 ```
-
----
 
 ### Response
 
 ```json
 {
-  "answer":"...",
-
-  "sources":[
-      {
-          "page":54,
-          "document":"tcs_annual_report.pdf",
-          "company":"TCS",
-          "chunk_id":184
-      }
-  ]
+    "answer": "...",
+    "sources": [
+        {
+            "page": 54,
+            "document": "tcs_annual_report.pdf",
+            "company": "TCS",
+            "chunk_id": 184
+        }
+    ]
 }
 ```
 
 ---
 
-# 🧠 How AtlasIQ Works
+# 📌 Example Workflow
 
-Step 1
-
-User uploads an annual report.
-
-↓
-
-Step 2
-
-AtlasIQ loads the PDF page-by-page.
-
-↓
-
-Step 3
-
-Each page is divided into overlapping chunks.
-
-↓
-
-Step 4
-
-Metadata is attached.
-
-↓
-
-Step 5
-
-Chunks are converted into embeddings.
-
-↓
-
-Step 6
-
-Embeddings are stored in ChromaDB.
-
-↓
-
-Step 7
-
-User asks a question.
-
-↓
-
-Step 8
-
-Retriever finds the most relevant chunks.
-
-↓
-
-Step 9
-
-Prompt Builder combines retrieved context.
-
-↓
-
-Step 10
-
-Gemini generates a grounded answer.
-
-↓
-
-Step 11
-
-AtlasIQ returns the answer along with source metadata.
-
----
-
-# 📌 Supported Queries
-
-Examples
-
-✔ What are the company's major revenue streams?
-
-✔ Explain the risk factors.
-
-✔ What is the operating margin?
-
-✔ Which business segment performed best?
-
-✔ What acquisitions occurred this year?
-
-✔ What sustainability initiatives were announced?
-
-✔ Explain capital expenditure.
-
-✔ What are management's future plans?
-
----
-
-# 🧪 Example Workflow
+### Step 1 — Index a Report
 
 ```text
-Upload PDF
-     │
-     ▼
-/ingest
-     │
-     ▼
-Vector Database
-     │
-     ▼
-User Question
-     │
-     ▼
-/ask
-     │
-     ▼
-Retriever
-     │
-     ▼
-Gemini
-     │
-     ▼
-Final Answer
+POST /ingest
+        │
+        ▼
+PDF → Chunking → Embeddings → ChromaDB
+```
+
+### Step 2 — Ask Questions
+
+```text
+POST /ask
+        │
+        ▼
+Question → Retriever → Gemini → Answer + Sources
 ```
 
 ---
 
 # 🛠 Configuration
 
-Current Default Settings
-
-| Parameter | Value |
-|-----------|-------|
+| Parameter | Default |
+|------------|---------|
+| Embedding Model | BAAI/bge-base-en-v1.5 |
+| LLM | Google Gemini |
+| Vector Database | ChromaDB |
 | Chunk Size | 1000 |
 | Chunk Overlap | 200 |
-| Embedding Model | BAAI/bge-base-en-v1.5 |
-| Vector Database | ChromaDB |
-| Retriever | Similarity Search |
-| LLM | Gemini |
+| Retrieval Strategy | Similarity Search |
 | Top-K Retrieval | 5 |
 
 ---
 
-# 🧹 Reset Vector Database
+# 🧹 Reset the Vector Database
 
-Delete previous embeddings
+If you want to re-index documents from scratch:
 
-Windows
+### Windows
 
 ```powershell
 Remove-Item -Recurse -Force database
 ```
 
-Linux/macOS
+### Linux / macOS
 
 ```bash
 rm -rf database
 ```
 
-Re-index
+Then run:
 
-```
+```text
 POST /ingest
 ```
 
----
-
-# 🧩 Current Limitations
-
-- Single-document retrieval
-- Similarity search only
-- English financial reports
-- Text-based PDFs
-- No OCR support
-- No reranking
-- No hybrid search
-- No web interface (coming soon)
-# 🧠 Deep Technical Architecture
-
-AtlasIQ follows a modular **Retrieval-Augmented Generation (RAG)** architecture that combines document processing, semantic search, vector databases, and Large Language Models to generate grounded financial insights.
-
-The system is designed around the principle:
-
-> **Retrieve first. Generate second.**
-
-Instead of sending an entire annual report to an LLM, AtlasIQ retrieves only the most relevant document chunks, reducing hallucinations, improving response quality, and lowering inference cost.
+to generate a fresh vector database.
 
 ---
-
-# 🏛 Overall System Architecture
-
-```mermaid
-flowchart TB
-
-A[Financial Report PDF]
--->
-B[PDF Loader]
-
-B
--->
-C[Recursive Chunking]
-
-C
--->
-D[Metadata Enrichment]
-
-D
--->
-E[Embedding Model]
-
-E
--->
-F[(ChromaDB)]
-
-User
--->
-G[Financial Question]
-
-G
--->
-H[Retriever]
-
-F
--->
-H
-
-H
--->
-I[Prompt Builder]
-
-I
--->
-J[Gemini LLM]
-
-J
--->
-K[Grounded Answer]
-
-K
--->
-L[Source Metadata]
-```
-
----
-
-# 🔄 End-to-End Processing Pipeline
-
-## Phase 1 — Document Ingestion
-
-Financial reports are loaded page-by-page using **PyMuPDF**.
-
-Each page is preserved with its corresponding page number to enable accurate source attribution later in the retrieval process.
-
-Example
-
-```
-Page 1
-
-Chairman's Letter
-```
-
-↓
-
-```
-{
-page:1,
-content:"Chairman's Letter..."
-}
-```
-
----
-
-## Phase 2 — Intelligent Chunking
-
-Large documents cannot be embedded directly.
-
-AtlasIQ divides each page into overlapping chunks using Recursive Character Text Splitting.
-
-Default Configuration
-
-| Parameter | Value |
-|-----------|-------|
-| Chunk Size | 1000 |
-| Chunk Overlap | 200 |
-
-Benefits
-
-✔ Preserves context
-
-✔ Prevents information loss
-
-✔ Improves retrieval quality
-
-✔ Handles long financial reports
-
----
-
-# 📄 Chunk Example
-
-Original Text
-
-```
-Revenue increased by 18%.
-
-Operating Margin improved to 24%.
-
-Cash Flow remained strong...
-```
-
-↓
-
-Chunks
-
-```
-Chunk 1
-
-Revenue increased by 18%...
-```
-
-```
-Chunk 2
-
-Operating Margin improved...
-```
-
-```
-Chunk 3
-
-Cash Flow remained...
-```
-
-Each chunk overlaps with neighboring chunks to preserve semantic continuity.
-
----
-
-# 🏷 Metadata Enrichment
-
-Every chunk is enriched with structured metadata before vectorization.
-
-Current Schema
-
-```json
-{
-    "chunk_id":184,
-    "page":54,
-    "document":"tcs_annual_report.pdf",
-    "company":"TCS",
-    "year":null
-}
-```
-
-Why Metadata Matters
-
-- Source attribution
-- Company filtering
-- Multi-document retrieval
-- Better citations
-- Future comparison workflows
-
----
-
-# 🧬 Embedding Pipeline
-
-AtlasIQ converts every document chunk into a dense semantic vector using **BAAI/bge-base-en-v1.5**.
-
-```
-Financial Text
-
-↓
-
-Embedding Model
-
-↓
-
-768-Dimensional Vector
-
-↓
-
-Vector Database
-```
-
-Unlike keyword search, embeddings capture semantic meaning rather than exact word matches.
-
-Example
-
-Query
-
-```
-Revenue Growth
-```
-
-can successfully retrieve
-
-```
-Top-line expansion
-```
-
-even without identical wording.
-
----
-
-# 🗄 Vector Database Architecture
-
-AtlasIQ uses **ChromaDB** for persistent vector storage.
-
-Each stored record contains:
-
-```
-Embedding
-
-+
-
-Original Chunk
-
-+
-
-Metadata
-```
-
-Conceptually:
-
-```
-{
-embedding:[0.25,0.83,...],
-
-document:"...",
-
-metadata:{
-page:54,
-company:"TCS"
-}
-}
-```
-
-This enables semantic retrieval while preserving traceability back to the source document.
-
----
-
-# 🔍 Semantic Retrieval
-
-When a user submits a question:
-
-```
-"What are the major revenue streams?"
-```
-
-AtlasIQ performs:
-
-Question
-
-↓
-
-Embedding
-
-↓
-
-Similarity Search
-
-↓
-
-Top-K Relevant Chunks
-
-↓
-
-Prompt Construction
-
-Only the most relevant chunks are forwarded to the LLM.
-
-This dramatically reduces hallucinations.
-
----
-
-# 🎯 Prompt Engineering
-
-Retrieved chunks are assembled into a structured prompt before being sent to Gemini.
-
-Prompt Structure
-
-```
-Retrieved Context
-
-+
-
-User Question
-
-↓
-
-Gemini
-
-↓
-
-Grounded Answer
-```
-
-This approach ensures that responses are generated from retrieved evidence rather than relying solely on the model's internal knowledge.
-
----
-
-# 🤖 Large Language Model Layer
-
-Current Model
-
-Google Gemini
-
-Responsibilities
-
-- Context understanding
-- Financial reasoning
-- Natural language generation
-- Answer synthesis
-- Source-aware responses
-
-AtlasIQ keeps the LLM layer modular, allowing future replacement with models such as:
-
-- GPT-5
-- Claude
-- Llama
-- Qwen
-- DeepSeek
-
-without changing the retrieval pipeline.
-
----
-
-# 🔄 Request Lifecycle
-
-```mermaid
-sequenceDiagram
-
-participant User
-participant API
-participant Retriever
-participant ChromaDB
-participant Gemini
-
-User->>API: Ask Question
-
-API->>Retriever: Retrieve Top-K Chunks
-
-Retriever->>ChromaDB: Similarity Search
-
-ChromaDB-->>Retriever: Relevant Chunks
-
-Retriever-->>API: Context
-
-API->>Gemini: Prompt
-
-Gemini-->>API: Generated Answer
-
-API-->>User: Answer + Sources
-```
-
----
-
-# 📊 Data Flow
-
-```
-Financial Report
-
-↓
-
-Page Extraction
-
-↓
-
-Chunk Creation
-
-↓
-
-Metadata
-
-↓
-
-Embeddings
-
-↓
-
-ChromaDB
-
-↓
-
-Retriever
-
-↓
-
-Prompt Builder
-
-↓
-
-Gemini
-
-↓
-
-Answer
-
-↓
-
-Source Citation
-```
-
----
-
-# ⚡ Why Retrieval-Augmented Generation?
-
-Traditional LLM
-
-```
-Question
-
-↓
-
-LLM
-
-↓
-
-Possible Hallucination
-```
-
-AtlasIQ
-
-```
-Question
-
-↓
-
-Retriever
-
-↓
-
-Verified Context
-
-↓
-
-LLM
-
-↓
-
-Grounded Response
-```
-
-Benefits
-
-✅ Reduced Hallucinations
-
-✅ Higher Accuracy
-
-✅ Source Transparency
-
-✅ Faster Retrieval
-
-✅ Lower Token Usage
-
----
-
-# 📈 Current Performance
-
-| Metric | Value |
-|---------|------:|
-| Average PDF Size | 300–500 Pages |
-| Current Test Report | 360 Pages |
-| Chunks Generated | ~1,438 |
-| Embedding Model | BAAI/bge-base-en-v1.5 |
-| Vector Database | ChromaDB |
-| Retrieval Method | Similarity Search |
-| Default Top-K | 5 |
-| API Framework | FastAPI |
-
----
-
-# 🏗 Design Principles
-
-AtlasIQ follows several software engineering principles:
-
-### Separation of Concerns
-
-Each component has a single responsibility:
-
-- Loader
-- Chunker
-- Embedder
-- Vector Store
-- Retriever
-- Prompt Builder
-- LLM
-- API Layer
-
----
-
-### Modularity
-
-Each module can be replaced independently.
-
-Examples:
-
-Replace
-
-```
-Gemini
-```
-
-with
-
-```
-Claude
-```
-
-or
-
-```
-GPT-5
-```
-
-without changing retrieval logic.
-
----
-
-### Scalability
-
-The architecture is designed to evolve toward:
-
-- Hybrid Search
-- Multi-document RAG
-- Cross-Encoder Reranking
-- Financial Knowledge Graphs
-- Agentic AI Workflows
-- SQL + RAG Integration
-- Interactive Dashboards
-- Enterprise Knowledge Bases
-
----
-
-# 🔮 Future Architecture
-
-```text
-                    User
-                      │
-        ┌─────────────┴─────────────┐
-        │                           │
-   Financial Reports          Live Financial Data
-        │                           │
-        └─────────────┬─────────────┘
-                      │
-                Hybrid Retriever
-                      │
-      ┌───────────────┴───────────────┐
-      │                               │
- Vector Search                  Keyword Search
-      │                               │
-      └───────────────┬───────────────┘
-                      │
-              Cross-Encoder Reranker
-                      │
-                Context Builder
-                      │
-                  Gemini / GPT
-                      │
-          Financial Research Assistant
-```
----
-
 # 🗺️ Roadmap
 
-AtlasIQ is under active development. The following roadmap outlines planned improvements toward a production-ready AI Financial Intelligence Platform.
+AtlasIQ is actively evolving into a production-ready AI platform for financial document analysis.
 
 | Feature | Status |
-|---------|:------:|
-| PDF Ingestion | ✅ |
-| Metadata-aware Chunking | ✅ |
-| HuggingFace Embeddings | ✅ |
+|----------|:------:|
+| PDF Processing | ✅ |
+| RAG Pipeline | ✅ |
+| Semantic Search | ✅ |
+| Hugging Face Embeddings | ✅ |
 | ChromaDB Integration | ✅ |
-| Gemini Integration | ✅ |
-| REST API | ✅ |
+| Google Gemini Integration | ✅ |
+| FastAPI REST API | ✅ |
 | Source Attribution | ✅ |
-| Multi-document RAG | 🚧 |
+| Multi-document Support | 🚧 |
 | Hybrid Search (BM25 + Vector) | 🚧 |
 | Cross-Encoder Reranking | 🚧 |
 | OCR Support | 🚧 |
-| Financial Charts | 🚧 |
-| Interactive Dashboard | 🚧 |
-| Authentication | 🚧 |
-| Cloud Deployment | 🚧 |
-| Docker Support | 📅 Planned |
-| Kubernetes Deployment | 📅 Planned |
-| Knowledge Graph Integration | 💡 Future |
-| Agentic Financial Research | 💡 Future |
+| React Dashboard | 📅 Planned |
+| Docker Deployment | 📅 Planned |
 
 ---
 
-# 📊 Performance Snapshot
+# 📊 Performance
 
-Current benchmark using the TCS Annual Report.
+Current development configuration.
 
 | Metric | Value |
 |---------|------:|
-| Report Pages | 360 |
+| Tested Report | TCS Annual Report |
+| Report Size | 360 Pages |
 | Chunks Generated | ~1,438 |
-| Chunk Size | 1000 |
-| Chunk Overlap | 200 |
 | Embedding Model | BAAI/bge-base-en-v1.5 |
-| Vector Store | ChromaDB |
+| Vector Database | ChromaDB |
 | Retrieval Strategy | Similarity Search |
-| Top-K Retrieval | 5 |
-| Backend Framework | FastAPI |
-
-> **Note:** These values represent the current development configuration and may change as AtlasIQ evolves.
+| Default Top-K | 5 |
 
 ---
 
-# 🧪 Example Use Cases
+# 🎯 Example Use Cases
 
 AtlasIQ can assist with:
 
-### 📈 Equity Research
+- 📈 Annual Report Analysis
+- 💰 Investment Research
+- 📊 Financial Statement Exploration
+- ⚠️ Risk Assessment
+- 🌱 ESG Analysis
+- 🏢 Enterprise Knowledge Search
 
-- Revenue analysis
-- Segment performance
-- Profitability trends
+Example questions:
 
----
-
-### 💰 Investment Research
-
-- Business overview
-- Growth opportunities
-- Competitive positioning
-
----
-
-### ⚠️ Risk Analysis
-
-- Risk factors
-- Legal proceedings
-- Regulatory disclosures
-
----
-
-### 🌱 ESG Analysis
-
-- Sustainability initiatives
-- Governance practices
-- Environmental commitments
-
----
-
-### 📑 Annual Report Exploration
-
-Instead of reading hundreds of pages manually, ask:
-
-- What were the company's major revenue drivers?
-- Explain the risk factors.
-- What changed compared to last year?
-- Summarize management's outlook.
-- What were the major acquisitions?
-
----
-
-# 🔐 Security Considerations
-
-Current implementation:
-
-- Local vector database
-- Environment variables for API keys
-- No hardcoded credentials
-- Source-grounded responses
-
-Planned enhancements:
-
-- User authentication
-- Role-based access control
-- Encrypted vector storage
-- Secure document uploads
-- Audit logging
-
----
-
-# 🐳 Deployment
-
-AtlasIQ currently supports local development.
-
-Future deployment targets include:
-
-- Docker
-- Render
-- Railway
-- Azure
-- AWS
-- Google Cloud
-- Kubernetes
+- What are the company's major revenue drivers?
+- Explain the key business risks.
+- Summarize the management discussion.
+- What sustainability initiatives were introduced?
+- Which segment generated the highest revenue?
 
 ---
 
@@ -1512,111 +561,42 @@ Future deployment targets include:
 
 Contributions are welcome.
 
-To contribute:
-
 1. Fork the repository
-2. Create a feature branch
+2. Create a new feature branch
 
 ```bash
-git checkout -b feature/amazing-feature
+git checkout -b feature/new-feature
 ```
 
 3. Commit your changes
 
 ```bash
-git commit -m "Add amazing feature"
+git commit -m "Add new feature"
 ```
 
 4. Push your branch
 
 ```bash
-git push origin feature/amazing-feature
+git push origin feature/new-feature
 ```
 
 5. Open a Pull Request
 
-Please keep pull requests focused, documented, and tested where applicable.
-
 ---
 
-# 💡 Future Vision
+# 🚀 Future Vision
 
-AtlasIQ aims to evolve beyond document question answering into a comprehensive AI-powered financial research platform.
+AtlasIQ is designed as the foundation for an AI-powered Financial Intelligence Platform.
 
-Future capabilities may include:
+Future enhancements include:
 
 - Multi-company comparison
 - Financial ratio extraction
 - Earnings call analysis
 - Interactive dashboards
-- Live market data integration
-- SQL + RAG workflows
-- Research report generation
-- Portfolio insights
-- Agentic financial research assistants
-
----
-
-# 📸 Screenshots
-
-> Screenshots and demo GIFs will be added as the user interface evolves.
-
-Suggested sections:
-
-```
-/assets
-
-├── dashboard.png
-├── architecture.png
-├── workflow.gif
-├── api-demo.gif
-└── retrieval.png
-```
-
----
-
-# ❓ Frequently Asked Questions
-
-### Why use RAG instead of sending the whole PDF to an LLM?
-
-Large annual reports often exceed an LLM's practical context window. Retrieval-Augmented Generation selects only the most relevant sections, improving efficiency and helping responses stay grounded in the document.
-
----
-
-### Does AtlasIQ support multiple reports?
-
-Not yet. Multi-document retrieval is planned.
-
----
-
-### Can I use another LLM?
-
-Yes. The architecture separates retrieval from generation, making it straightforward to replace the LLM layer with another compatible model.
-
----
-
-### Which embedding model is used?
-
-Current implementation:
-
-```
-BAAI/bge-base-en-v1.5
-```
-
----
-
-# 📚 References
-
-AtlasIQ is built using modern AI and Python tooling, including:
-
-- FastAPI
-- LangChain
-- ChromaDB
-- Hugging Face Embeddings
-- Google Gemini
-- PyMuPDF
-
-Refer to each project's official documentation for detailed usage and licensing information.
+- Live financial data integration
+- Agentic AI workflows
+- Enterprise knowledge bases
 
 ---
 
@@ -1626,38 +606,31 @@ Refer to each project's official documentation for detailed usage and licensing 
 
 **AI/ML Engineer • Data Scientist • Generative AI Developer**
 
-Building intelligent AI systems focused on:
+Passionate about building intelligent AI systems using:
 
 - Retrieval-Augmented Generation (RAG)
 - Machine Learning
 - Large Language Models
 - Financial AI
 - Computer Vision
-- Data Science
 
 ### Connect with me
 
 - 💼 LinkedIn: https://www.linkedin.com/in/gaurishkale16
 - 💻 GitHub: https://github.com/gaurishkale
-- 📧 Email: your-email@example.com
 
 ---
 
-# 🌟 Support the Project
+# ⭐ Support
 
-If AtlasIQ helped you or inspired your work:
+If you found AtlasIQ useful:
 
-⭐ Star the repository
+- ⭐ Star the repository
+- 🍴 Fork the project
+- 🐛 Report issues
+- 💡 Suggest improvements
 
-🍴 Fork the project
-
-🐛 Report issues
-
-💡 Suggest improvements
-
-🤝 Contribute new features
-
-Every contribution helps improve the project.
+Your support helps improve the project.
 
 ---
 
@@ -1671,10 +644,9 @@ See the `LICENSE` file for more information.
 
 <div align="center">
 
-## ⭐ If you found AtlasIQ useful, consider giving the repository a star!
+### ⭐ Transforming Financial Documents into Actionable Intelligence with AI
 
-**Turning Financial Documents into Actionable Intelligence with AI.**
-
-Made with ❤️ using Python, FastAPI, LangChain, ChromaDB, Hugging Face, and Google Gemini.
+Built with **FastAPI • LangChain • ChromaDB • Hugging Face • Google Gemini**
 
 </div>
+
